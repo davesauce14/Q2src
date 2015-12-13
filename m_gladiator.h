@@ -94,3 +94,5 @@
 #define FRAME_painup7         	89
 
 #define MODEL_SCALE		1.000000
+
+void SP_monster_gladiator(edict_t *self);

@@ -203,3 +203,18 @@
 
 #define MODEL_SCALE		1.000000
 
+//mah shit
+extern int this_is_global;
+extern int currentLevel;
+extern qboolean levelLoad;
+extern int zombieCount;
+extern int zombiesPerWave;
+extern int zombieWaves;
+
+
+
+extern int bosses;
+
+
+//mah shit (end)
+
