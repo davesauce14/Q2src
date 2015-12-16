@@ -1,29 +1,4 @@
 ﻿cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
-  g_cmds.c
-g_cmds.c(15): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-g_cmds.c(38): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-g_cmds.c(39): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-g_cmds.c(703): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(706): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(789): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(790): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(791): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(802): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(809): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
-g_cmds.c(874): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-g_cmds.c(878): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
   p_client.c
 c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(28): warning C4005: 'FRAME_run1': macro redefinition
   c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(45): note: see previous definition of 'FRAME_run1'
@@ -37,17 +12,164 @@ c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(32): war
   c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(49): note: see previous definition of 'FRAME_run5'
 c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(33): warning C4005: 'FRAME_run6': macro redefinition
   c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(50): note: see previous definition of 'FRAME_run6'
-p_client.c(1377): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(6): warning C4005: 'FRAME_stand01': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(5): note: see previous definition of 'FRAME_stand01'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(7): warning C4005: 'FRAME_stand02': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(6): note: see previous definition of 'FRAME_stand02'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(8): warning C4005: 'FRAME_stand03': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(7): note: see previous definition of 'FRAME_stand03'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(9): warning C4005: 'FRAME_stand04': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(8): note: see previous definition of 'FRAME_stand04'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(10): warning C4005: 'FRAME_stand05': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(9): note: see previous definition of 'FRAME_stand05'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(11): warning C4005: 'FRAME_stand06': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(10): note: see previous definition of 'FRAME_stand06'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(12): warning C4005: 'FRAME_stand07': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(11): note: see previous definition of 'FRAME_stand07'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(13): warning C4005: 'FRAME_stand08': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(12): note: see previous definition of 'FRAME_stand08'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(14): warning C4005: 'FRAME_stand09': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(13): note: see previous definition of 'FRAME_stand09'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(15): warning C4005: 'FRAME_stand10': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(14): note: see previous definition of 'FRAME_stand10'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(16): warning C4005: 'FRAME_stand11': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(15): note: see previous definition of 'FRAME_stand11'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(17): warning C4005: 'FRAME_stand12': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(16): note: see previous definition of 'FRAME_stand12'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(18): warning C4005: 'FRAME_stand13': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(17): note: see previous definition of 'FRAME_stand13'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(19): warning C4005: 'FRAME_stand14': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(18): note: see previous definition of 'FRAME_stand14'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(20): warning C4005: 'FRAME_stand15': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(19): note: see previous definition of 'FRAME_stand15'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(21): warning C4005: 'FRAME_stand16': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(20): note: see previous definition of 'FRAME_stand16'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(22): warning C4005: 'FRAME_stand17': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(21): note: see previous definition of 'FRAME_stand17'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(23): warning C4005: 'FRAME_stand18': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(22): note: see previous definition of 'FRAME_stand18'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(24): warning C4005: 'FRAME_stand19': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(23): note: see previous definition of 'FRAME_stand19'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(25): warning C4005: 'FRAME_stand20': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(24): note: see previous definition of 'FRAME_stand20'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(26): warning C4005: 'FRAME_stand21': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(25): note: see previous definition of 'FRAME_stand21'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(27): warning C4005: 'FRAME_stand22': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(26): note: see previous definition of 'FRAME_stand22'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(28): warning C4005: 'FRAME_stand23': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(27): note: see previous definition of 'FRAME_stand23'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(29): warning C4005: 'FRAME_stand24': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(28): note: see previous definition of 'FRAME_stand24'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(30): warning C4005: 'FRAME_stand25': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(29): note: see previous definition of 'FRAME_stand25'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(31): warning C4005: 'FRAME_stand26': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(30): note: see previous definition of 'FRAME_stand26'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(32): warning C4005: 'FRAME_stand27': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(31): note: see previous definition of 'FRAME_stand27'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(33): warning C4005: 'FRAME_stand28': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(32): note: see previous definition of 'FRAME_stand28'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(34): warning C4005: 'FRAME_stand29': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(33): note: see previous definition of 'FRAME_stand29'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(35): warning C4005: 'FRAME_stand30': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(34): note: see previous definition of 'FRAME_stand30'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(36): warning C4005: 'FRAME_stand31': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(35): note: see previous definition of 'FRAME_stand31'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(37): warning C4005: 'FRAME_stand32': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(36): note: see previous definition of 'FRAME_stand32'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(38): warning C4005: 'FRAME_stand33': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(37): note: see previous definition of 'FRAME_stand33'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(39): warning C4005: 'FRAME_stand34': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(38): note: see previous definition of 'FRAME_stand34'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(40): warning C4005: 'FRAME_stand35': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(39): note: see previous definition of 'FRAME_stand35'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(41): warning C4005: 'FRAME_stand36': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(40): note: see previous definition of 'FRAME_stand36'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(42): warning C4005: 'FRAME_stand37': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(41): note: see previous definition of 'FRAME_stand37'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(43): warning C4005: 'FRAME_stand38': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(42): note: see previous definition of 'FRAME_stand38'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(44): warning C4005: 'FRAME_stand39': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(43): note: see previous definition of 'FRAME_stand39'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(45): warning C4005: 'FRAME_stand40': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(44): note: see previous definition of 'FRAME_stand40'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(86): warning C4005: 'FRAME_walk10': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(21): note: see previous definition of 'FRAME_walk10'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(87): warning C4005: 'FRAME_walk11': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(22): note: see previous definition of 'FRAME_walk11'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(88): warning C4005: 'FRAME_walk12': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(23): note: see previous definition of 'FRAME_walk12'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(89): warning C4005: 'FRAME_walk13': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(24): note: see previous definition of 'FRAME_walk13'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(90): warning C4005: 'FRAME_walk14': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(25): note: see previous definition of 'FRAME_walk14'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(91): warning C4005: 'FRAME_walk15': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(26): note: see previous definition of 'FRAME_walk15'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(92): warning C4005: 'FRAME_walk16': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_gladiator.h(27): note: see previous definition of 'FRAME_walk16'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(105): warning C4005: 'FRAME_pain101': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(59): note: see previous definition of 'FRAME_pain101'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(106): warning C4005: 'FRAME_pain102': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(60): note: see previous definition of 'FRAME_pain102'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(107): warning C4005: 'FRAME_pain103': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(61): note: see previous definition of 'FRAME_pain103'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(108): warning C4005: 'FRAME_pain104': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(62): note: see previous definition of 'FRAME_pain104'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(115): warning C4005: 'FRAME_pain201': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(63): note: see previous definition of 'FRAME_pain201'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(116): warning C4005: 'FRAME_pain202': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(64): note: see previous definition of 'FRAME_pain202'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(117): warning C4005: 'FRAME_pain203': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(65): note: see previous definition of 'FRAME_pain203'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(118): warning C4005: 'FRAME_pain204': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(66): note: see previous definition of 'FRAME_pain204'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(130): warning C4005: 'FRAME_death101': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(183): note: see previous definition of 'FRAME_death101'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(131): warning C4005: 'FRAME_death102': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(184): note: see previous definition of 'FRAME_death102'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(132): warning C4005: 'FRAME_death103': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(185): note: see previous definition of 'FRAME_death103'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(133): warning C4005: 'FRAME_death104': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(186): note: see previous definition of 'FRAME_death104'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(134): warning C4005: 'FRAME_death105': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(187): note: see previous definition of 'FRAME_death105'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(135): warning C4005: 'FRAME_death106': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(188): note: see previous definition of 'FRAME_death106'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(150): warning C4005: 'FRAME_death201': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(189): note: see previous definition of 'FRAME_death201'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(151): warning C4005: 'FRAME_death202': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(190): note: see previous definition of 'FRAME_death202'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(152): warning C4005: 'FRAME_death203': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(191): note: see previous definition of 'FRAME_death203'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(153): warning C4005: 'FRAME_death204': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(192): note: see previous definition of 'FRAME_death204'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(154): warning C4005: 'FRAME_death205': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(193): note: see previous definition of 'FRAME_death205'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(155): warning C4005: 'FRAME_death206': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(194): note: see previous definition of 'FRAME_death206'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(175): warning C4005: 'FRAME_death301': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(195): note: see previous definition of 'FRAME_death301'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(176): warning C4005: 'FRAME_death302': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(196): note: see previous definition of 'FRAME_death302'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(177): warning C4005: 'FRAME_death303': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(197): note: see previous definition of 'FRAME_death303'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(178): warning C4005: 'FRAME_death304': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(198): note: see previous definition of 'FRAME_death304'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(179): warning C4005: 'FRAME_death305': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(199): note: see previous definition of 'FRAME_death305'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(180): warning C4005: 'FRAME_death306': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(200): note: see previous definition of 'FRAME_death306'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(181): warning C4005: 'FRAME_death307': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(201): note: see previous definition of 'FRAME_death307'
+c:\program files (x86)\steam\steamapps\common\quake 2\src\m_infantry.h(182): warning C4005: 'FRAME_death308': macro redefinition
+  c:\program files (x86)\steam\steamapps\common\quake 2\src\m_player.h(202): note: see previous definition of 'FRAME_death308'
+p_client.c(1382): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-p_client.c(1382): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+p_client.c(1387): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(346): note: see declaration of 'strncpy'
-p_client.c(1422): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+p_client.c(1427): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(346): note: see declaration of 'strncpy'
-  p_view.c
-  p_weapon.c
-  Generating Code...
-c:\program files (x86)\steam\steamapps\common\quake 2\src\p_client.c(1585): warning C4700: uninitialized local variable 'position' used
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1189,5): warning MSB8012: TargetPath(C:\Program Files (x86)\Steam\steamapps\common\Quake 2\src\.\..\debug\game.dll) does not match the Linker's OutputFile property value (C:\Program Files (x86)\Steam\steamapps\common\Quake 2\debug\gamex86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1191,5): warning MSB8012: TargetName(game) does not match the Linker's OutputFile property value (gamex86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library .\..\debug\gamex86.lib and object .\..\debug\gamex86.exp
   game.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 2\src\.\..\debug\game.dll
+          1 file(s) moved.

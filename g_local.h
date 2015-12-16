@@ -1093,3 +1093,7 @@ struct edict_s
 	monsterinfo_t	monsterinfo;
 };
 
+//zombie client.c
+
+void onZombieDeath();
+

@@ -291,6 +291,10 @@ void infantry_dead (edict_t *self)
 	gi.linkentity (self);
 
 	M_FlyCheck (self);
+
+	Com_Printf("infantry dead");
+	onZombieDeath();
+
 }
 
 mframe_t infantry_frames_death1 [] =
@@ -367,6 +371,8 @@ mmove_t infantry_move_death3 = {FRAME_death301, FRAME_death309, infantry_frames_
 void infantry_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
 	int		n;
+	Com_Printf("infantry shot?");
+	//onZombieDeath();
 
 // check for gib
 	if (self->health <= self->gib_health)

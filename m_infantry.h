@@ -211,3 +211,5 @@
 #define FRAME_attak208        	206
 
 #define MODEL_SCALE		1.000000
+
+void SP_monster_infantry(edict_t *self);

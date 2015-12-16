@@ -839,12 +839,22 @@ void Blaster_Fire(edict_t *ent, vec3_t g_offset, int damage, qboolean hyper, int
 void Weapon_Blaster_Fire(edict_t *ent)
 {
 	int		damage;
+	vec3_t tempvec;
 
 	if (deathmatch->value)
 		damage = 15;
 	else
 		damage = 10;
-	Blaster_Fire(ent, vec3_origin, damage, false, EF_BLASTER);
+	Blaster_Fire(ent, vec3_origin, damage, true, EF_BLASTER);
+
+	// Dave : add 2 new bolts below
+	VectorSet(tempvec, 0, 8, 0);
+	VectorAdd(tempvec, vec3_origin, tempvec);
+	Blaster_Fire(ent, tempvec, damage, false, EF_BLASTER);
+
+	VectorSet(tempvec, 0, -8, 0);
+	VectorAdd(tempvec, vec3_origin, tempvec);
+	Blaster_Fire(ent, tempvec, damage, false, EF_BLASTER);
 	ent->client->ps.gunframe++;
 }
 
@@ -853,7 +863,7 @@ void Weapon_Blaster(edict_t *ent)
 	static int	pause_frames[] = { 19, 32, 0 };
 	static int	fire_frames[] = { 5, 0 };
 
-	Weapon_Generic(ent, 4, 8, 52, 55, pause_frames, fire_frames, Weapon_Blaster_Fire);
+	Weapon_Generic(ent, 4, 5, 52, 55, pause_frames, fire_frames, Weapon_Blaster_Fire);
 }
 
 

@@ -210,11 +210,17 @@ extern qboolean levelLoad;
 extern int zombieCount;
 extern int zombiesPerWave;
 extern int zombieWaves;
+extern int zombiesRemaining;
+extern int zombieTime;
+extern int zombiesOnMap;
 
 
 
 extern int bosses;
 
+void spawnZombieWave();
+void spawnZombie(float x, float y, float z);
+void spawnWeapon();
 
 //mah shit (end)
 

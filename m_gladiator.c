@@ -257,6 +257,8 @@ void gladiator_dead (edict_t *self)
 	self->svflags |= SVF_DEADMONSTER;
 	self->nextthink = 0;
 	gi.linkentity (self);
+
+	Com_Printf("KILLA BITCH");
 }
 
 mframe_t gladiator_frames_death [] =
@@ -289,7 +291,7 @@ mmove_t gladiator_move_death = {FRAME_death1, FRAME_death22, gladiator_frames_de
 void gladiator_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
 	int		n;
-
+	
 // check for gib
 	if (self->health <= self->gib_health)
 	{

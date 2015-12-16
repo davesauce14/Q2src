@@ -1,14 +1,19 @@
 #include "g_local.h"
 #include "m_player.h"
 #include "m_gladiator.h"
+#include "m_infantry.h"
 
 
 //maybe make a function called once on init to initalize the values
-int currentLevel = 3;
+int currentLevel = 1;
 qboolean levelLoad = true; 
 int zombieCount;
 int zombiesPerWave;
 int zombieWaves;
+int zombiesRemaining;
+int zombiesOnMap;
+
+int zombieTime = 3;
 
 
 
@@ -1577,17 +1582,18 @@ int getLevel() {
 	return currentLevel;
 }
 
-void spawnZombie(){
+void spawnZombie(float x, float y, float z){
 	edict_t *badGuy;
-	float * position;
+	vec_t  position[3];
 
 	badGuy = G_Spawn();
-	position[0] = 110;
-	position[1] = -260;
-	position[2] = 80;
+	position[0] = x;
+	position[1] = y;
+	position[2] = z;
 	VectorCopy(position, badGuy->s.origin);
 
-	SP_monster_gladiator(badGuy);
+	SP_monster_infantry(badGuy);
+	zombiesOnMap++;
 }
 
 void levelInit(int _zombieCount, int _zombiesPerWave, int _bosses) {
@@ -1595,10 +1601,117 @@ void levelInit(int _zombieCount, int _zombiesPerWave, int _bosses) {
 	zombiesPerWave = _zombiesPerWave;
 	zombieWaves = _zombieCount / _zombiesPerWave;
 
-	Com_Printf("%i", zombieWaves);
+	zombiesRemaining = _zombieCount;
+
 
 	bosses = _bosses;
+	spawnWeapon();
 }
+
+void spawnZombieWave() {
+
+	zombieTime = level.time + 10;
+
+
+	for (int i = 1; i <= zombiesPerWave; i++) {
+		if (zombiesOnMap <= zombiesRemaining) {
+			Com_Printf("zombies per wave: ");
+			Com_Printf("%d", i);
+			switch (i) {
+			case 1:
+				spawnZombie(110, -260, 80);
+				break;
+			case 2:
+				spawnZombie(214, 88, 50);
+				break;
+				
+			case 3:
+				spawnZombie(-400, -360, 80);
+				break;
+			case 4:
+				spawnZombie(-600, 270, 80);
+				break;/*
+			case 5:
+				spawnZombie(150, -260, 80);
+				break;
+			case 6:
+				spawnZombie(110, -260, 80);
+				break;
+				*/
+			}
+		}
+	}
+}
+
+/*
+=====================
+zombie death
+
+*/
+
+void onZombieDeath() {
+	zombiesRemaining--;
+	Com_Printf("%d", zombiesRemaining);
+	if (zombiesRemaining <= 0) {
+		currentLevel ++;
+		levelLoad = true;
+	}
+}
+
+
+/*
+======================
+spawn weapons
+*/
+
+void spawnWeapon() {
+	edict_t	*weapon;
+	vec_t position[3];
+
+	weapon = G_Spawn();
+
+	position[0] = 214;
+	position[1] = 88;
+	position[2] = 80;
+
+	VectorCopy(position, weapon->s.origin);
+	weapon->classname = "weapon_grenadelauncher";
+
+	gi.linkentity(weapon);
+
+
+
+	edict_t	*rocket;
+
+	rocket = G_Spawn();
+	VectorCopy(position, rocket->s.origin);
+	//VectorCopy(dir, rocket->movedir);
+	//vectoangles(dir, rocket->s.angles);
+	//VectorScale(dir, speed, rocket->velocity);
+	rocket->movetype = MOVETYPE_FLYMISSILE;
+	rocket->clipmask = MASK_SHOT;
+	rocket->solid = SOLID_BBOX;
+	rocket->s.effects |= EF_ROCKET;
+	VectorClear(rocket->mins);
+	VectorClear(rocket->maxs);
+	rocket->s.modelindex = gi.modelindex("models/objects/rocket/tris.md2");
+	//rocket->owner = self;
+	//rocket->touch = rocket_touch;
+	//rocket->nextthink = level.time + 8000 / speed;
+	rocket->think = G_FreeEdict;
+	//rocket->dmg = damage;
+	//rocket->radius_dmg = radius_damage;
+	//rocket->dmg_radius = damage_radius;
+	rocket->s.sound = gi.soundindex("weapons/rockfly.wav");
+	rocket->classname = "rocket";
+
+
+	gi.linkentity(rocket);
+
+}
+
+
+
 
 /*
 ==============
@@ -1786,24 +1899,33 @@ void ClientThink(edict_t *ent, usercmd_t *ucmd)
 		if (other->inuse && other->client->chase_target == ent)
 			UpdateChaseCam(other);
 	}
+	
+	//Com_Printf("%f\n", level.time);
 
-
-
-	if (loadNextLevel()) {
+	if (levelLoad) {
 		switch (getLevel()) {
 		case 1:
 			Com_Printf("============ level 1 ===============");
-			levelInit(20, 5, 2); //totzombies, zombiesPerWave, bosses
+			levelInit(2, 2, 0);
+			//levelInit(20, 5, 2); //totzombies, zombiesPerWave, bosses
 			break;
 		case 2:
 			Com_Printf("============ level 2 ===============");
+			levelInit(30, 6, 2);
 			break;
 		case 3:
 			Com_Printf("============ level 3 ===============");
+			levelInit(42, 7, 2);
 			break;
 
 
 		}
+
+	}
+
+	if (level.time >= zombieTime) {
+		Com_Printf("called wave spawn");
+		spawnZombieWave();
 
 	}
 }

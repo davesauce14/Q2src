@@ -257,6 +257,9 @@
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
     </Link>
+    <PostBuildEvent>
+      <Command>"C:\Program Files (x86)\Steam\steamapps\common\Quake 2\quakePLZ.bat"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="g_ai.c">

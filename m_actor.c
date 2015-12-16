@@ -321,6 +321,8 @@ void actor_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage
 {
 	int		n;
 
+	Com_Printf("KILLA BITCH");
+
 // check for gib
 	if (self->health <= -80)
 	{
