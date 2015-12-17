@@ -800,7 +800,7 @@ void Blaster_Fire(edict_t *ent, vec3_t g_offset, int damage, qboolean hyper, int
 	vec3_t	start;
 	vec3_t	offset;
 
-	Com_Printf("%f", start);
+
 	if (is_quad)
 		damage *= 4;
 	AngleVectors(ent->client->v_angle, forward, right, NULL);
@@ -812,6 +812,7 @@ void Blaster_Fire(edict_t *ent, vec3_t g_offset, int damage, qboolean hyper, int
 	ent->client->kick_angles[0] = -1;
 
 	//print player origin
+	/*
 	Com_Printf("current location :");
 	Com_Printf("------------------------------ HI ------------------------------:");
 	Com_Printf("X :");
@@ -820,7 +821,7 @@ void Blaster_Fire(edict_t *ent, vec3_t g_offset, int damage, qboolean hyper, int
 	Com_Printf("%f", start[1]);
 	Com_Printf("Z :");
 	Com_Printf("%f", start[2]);
-
+	*/
 	fire_blaster(ent, start, forward, damage, 1000, effect, hyper);
 
 	// send muzzle flash

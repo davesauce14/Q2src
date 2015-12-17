@@ -284,6 +284,7 @@ void infantry_sight (edict_t *self, edict_t *other)
 
 void infantry_dead (edict_t *self)
 {
+	
 	VectorSet (self->mins, -16, -16, -24);
 	VectorSet (self->maxs, 16, 16, -8);
 	self->movetype = MOVETYPE_TOSS;
@@ -292,8 +293,7 @@ void infantry_dead (edict_t *self)
 
 	M_FlyCheck (self);
 
-	Com_Printf("infantry dead");
-	onZombieDeath();
+	
 
 }
 
@@ -372,7 +372,6 @@ void infantry_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dam
 {
 	int		n;
 	Com_Printf("infantry shot?");
-	//onZombieDeath();
 
 // check for gib
 	if (self->health <= self->gib_health)
@@ -384,6 +383,8 @@ void infantry_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dam
 			ThrowGib (self, "models/objects/gibs/sm_meat/tris.md2", damage, GIB_ORGANIC);
 		ThrowHead (self, "models/objects/gibs/head2/tris.md2", damage, GIB_ORGANIC);
 		self->deadflag = DEAD_DEAD;
+		Com_Printf("infantry dead");
+		onZombieDeath();
 		return;
 	}
 
@@ -399,16 +400,22 @@ void infantry_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dam
 	{
 		self->monsterinfo.currentmove = &infantry_move_death1;
 		gi.sound (self, CHAN_VOICE, sound_die2, 1, ATTN_NORM, 0);
+		Com_Printf("infantry dead");
+		onZombieDeath();
 	}
 	else if (n == 1)
 	{
 		self->monsterinfo.currentmove = &infantry_move_death2;
 		gi.sound (self, CHAN_VOICE, sound_die1, 1, ATTN_NORM, 0);
+		Com_Printf("infantry dead");
+		onZombieDeath();
 	}
 	else
 	{
 		self->monsterinfo.currentmove = &infantry_move_death3;
 		gi.sound (self, CHAN_VOICE, sound_die2, 1, ATTN_NORM, 0);
+		Com_Printf("infantry dead");
+		onZombieDeath();
 	}
 }
 

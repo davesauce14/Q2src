@@ -1096,4 +1096,5 @@ struct edict_s
 //zombie client.c
 
 void onZombieDeath();
+void onBossDeath();
 

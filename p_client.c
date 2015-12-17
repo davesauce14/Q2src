@@ -7,11 +7,14 @@
 //maybe make a function called once on init to initalize the values
 int currentLevel = 1;
 qboolean levelLoad = true; 
+qboolean releaseBoss = false;
 int zombieCount;
 int zombiesPerWave;
 int zombieWaves;
 int zombiesRemaining;
 int zombiesOnMap;
+int  bossCount;
+int bossesKilled = 0;
 
 int zombieTime = 3;
 
@@ -1596,16 +1599,42 @@ void spawnZombie(float x, float y, float z){
 	zombiesOnMap++;
 }
 
+void spawnBoss() {
+	if (releaseBoss) {
+		for (int i = 1; i <= bossCount; i++) {
+			edict_t *badGuy;
+			vec_t  position[3];
+
+			badGuy = G_Spawn();
+			position[0] = 214;
+			position[1] = 88;
+			position[2] = 50;
+			VectorCopy(position, badGuy->s.origin);
+
+			SP_monster_gladiator(badGuy);
+		}
+		releaseBoss = false;
+	}
+}
+
+
 void levelInit(int _zombieCount, int _zombiesPerWave, int _bosses) {
 	zombieCount = _zombieCount;
 	zombiesPerWave = _zombiesPerWave;
 	zombieWaves = _zombieCount / _zombiesPerWave;
+	bossCount = _bosses;
 
 	zombiesRemaining = _zombieCount;
+	releaseBoss = true;
+
+	Com_Printf("zombies per wave: ");
+	Com_Printf("%d/n", zombiesPerWave);
+
+	Com_Printf("zombieWaves: ");
+	Com_Printf("%d/n", zombieWaves);
 
 
 	bosses = _bosses;
-	spawnWeapon();
 }
 
 void spawnZombieWave() {
@@ -1614,8 +1643,8 @@ void spawnZombieWave() {
 
 
 	for (int i = 1; i <= zombiesPerWave; i++) {
-		if (zombiesOnMap <= zombiesRemaining) {
-			Com_Printf("zombies per wave: ");
+		
+			Com_Printf("zombie number: ");
 			Com_Printf("%d", i);
 			switch (i) {
 			case 1:
@@ -1638,7 +1667,7 @@ void spawnZombieWave() {
 				spawnZombie(110, -260, 80);
 				break;
 				*/
-			}
+			
 		}
 	}
 }
@@ -1651,11 +1680,22 @@ zombie death
 
 void onZombieDeath() {
 	zombiesRemaining--;
+	Com_Printf("zombies remaining: ");
 	Com_Printf("%d", zombiesRemaining);
 	if (zombiesRemaining <= 0) {
-		currentLevel ++;
+		spawnBoss();
+	}
+}
+
+void onBossDeath() {
+	bossesKilled++;
+	Com_Printf("bosses killed: ");
+	Com_Printf("%d", bossesKilled);
+	if (bossesKilled >= bossCount) {
+		currentLevel++;
 		levelLoad = true;
 	}
+
 }
 
 
@@ -1663,54 +1703,6 @@ void onZombieDeath() {
 ======================
 spawn weapons
 */
-
-void spawnWeapon() {
-	edict_t	*weapon;
-	vec_t position[3];
-
-	weapon = G_Spawn();
-
-	position[0] = 214;
-	position[1] = 88;
-	position[2] = 80;
-
-	VectorCopy(position, weapon->s.origin);
-	weapon->classname = "weapon_grenadelauncher";
-
-	gi.linkentity(weapon);
-
-
-
-	edict_t	*rocket;
-
-	rocket = G_Spawn();
-	VectorCopy(position, rocket->s.origin);
-	//VectorCopy(dir, rocket->movedir);
-	//vectoangles(dir, rocket->s.angles);
-	//VectorScale(dir, speed, rocket->velocity);
-	rocket->movetype = MOVETYPE_FLYMISSILE;
-	rocket->clipmask = MASK_SHOT;
-	rocket->solid = SOLID_BBOX;
-	rocket->s.effects |= EF_ROCKET;
-	VectorClear(rocket->mins);
-	VectorClear(rocket->maxs);
-	rocket->s.modelindex = gi.modelindex("models/objects/rocket/tris.md2");
-	//rocket->owner = self;
-	//rocket->touch = rocket_touch;
-	//rocket->nextthink = level.time + 8000 / speed;
-	rocket->think = G_FreeEdict;
-	//rocket->dmg = damage;
-	//rocket->radius_dmg = radius_damage;
-	//rocket->dmg_radius = damage_radius;
-	rocket->s.sound = gi.soundindex("weapons/rockfly.wav");
-	rocket->classname = "rocket";
-
-
-	gi.linkentity(rocket);
-
-}
-
-
 
 
 /*
@@ -1906,7 +1898,7 @@ void ClientThink(edict_t *ent, usercmd_t *ucmd)
 		switch (getLevel()) {
 		case 1:
 			Com_Printf("============ level 1 ===============");
-			levelInit(2, 2, 0);
+			levelInit(2, 2, 1);
 			//levelInit(20, 5, 2); //totzombies, zombiesPerWave, bosses
 			break;
 		case 2:
@@ -1917,8 +1909,6 @@ void ClientThink(edict_t *ent, usercmd_t *ucmd)
 			Com_Printf("============ level 3 ===============");
 			levelInit(42, 7, 2);
 			break;
-
-
 		}
 
 	}

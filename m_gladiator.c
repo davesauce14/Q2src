@@ -304,6 +304,8 @@ void gladiator_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int da
 		self->deadflag = DEAD_DEAD;
 		return;
 	}
+	Com_Printf("boss dead");
+	onBossDeath();
 
 	if (self->deadflag == DEAD_DEAD)
 		return;

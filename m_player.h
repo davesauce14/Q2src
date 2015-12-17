@@ -207,12 +207,15 @@
 extern int this_is_global;
 extern int currentLevel;
 extern qboolean levelLoad;
+extern qboolean releaseBoss;
 extern int zombieCount;
 extern int zombiesPerWave;
 extern int zombieWaves;
 extern int zombiesRemaining;
 extern int zombieTime;
 extern int zombiesOnMap;
+extern int bossCount;
+extern int bossesKilled;
 
 
 
@@ -220,7 +223,6 @@ extern int bosses;
 
 void spawnZombieWave();
 void spawnZombie(float x, float y, float z);
-void spawnWeapon();
 
 //mah shit (end)
 
